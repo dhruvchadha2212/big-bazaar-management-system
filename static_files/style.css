@@ -1,0 +1,434 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	overflow: hidden;
+}
+/* Full-width input fields */
+#id01 input[type=text], #id01 input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	color: black;
+}
+
+/* Set a style for all buttons */
+#id01 button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+#id01 .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+#id01 .container {
+    padding: 16px;
+}
+
+#id01 span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+#id01 .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Add Zoom Animation */
+#id01 .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+/*welcome page*/
+#welcomepage {
+	width: 100%;
+	height: 800px;
+	background-image: url(back.jpg);
+	background-size: cover;
+	position: relative;
+}
+#status {
+	width: 100px;
+	height: 20px;
+	border-radius: 0 0 15px 15px;
+	position: absolute;
+	left: 45%;
+	text-align: center;
+	background-color: rgba(255,0,0,0.7);
+	padding: 5px;
+	font-weight: bold;
+}
+#status:hover {
+	background-color: rgba(255,0,0,0.9);
+	cursor: pointer;
+}
+#fade {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.8);
+}
+#welcomepagehead {
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	top: 150px;
+	color: white;
+	font-size: 70px;
+	font-family: "Trebuchet MS";
+}
+#h_links {
+	width: 1000px;
+	height: 100px;
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+	top: 230px;
+}
+#neworder, #h_employee, #h_supplier, #getwarnings, #h_products {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 3px solid white;
+	box-sizing: border-box;
+	margin: 0 50px 0 50px;
+	float: left;
+	transition: all 0.2s;
+	text-align: center;
+	color: white;
+}
+#neworder:hover, #h_employee:hover, #h_supplier:hover, #getwarnings:hover, #h_products:hover {
+	background-color: rgba(251,51,0,0.5);
+	cursor: pointer;
+	border: 10px solid white;
+}
+
+#neworder:hover p, #h_employee:hover p, #h_supplier:hover p, #getwarnings:hover p, #h_products:hover p {
+	top: 30px;
+}
+#neworder p, #h_employee p, #h_supplier p, #getwarnings p, #h_products p {
+	position: relative;
+	top: 36px;
+	font-family: "Trebuchet MS";
+	transition: all 0.2s;
+}
+
+/*form styling*/
+form input, form button, form select {
+	padding: 7px;
+	margin: 2px;
+}
+form input {
+	background-color: rgba(0,0,0,0);
+	font-family: "Trebuchet MS";
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+form button {
+	background-color: grey;
+	border: 1px solid black;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+form button:hover {
+	cursor: pointer;
+}
+/*table styling*/
+table, th, tr, td{
+	border-collapse: collapse;
+	border: 2px solid white;
+	padding: 2px;
+	color: white;
+}
+/*neworder page*/
+#neworder_page {
+	background-image: url(otherback.jpg);
+	width: 100%;
+	height: 800px;
+	position: relative;
+}
+#orderId {
+	text-align: center;
+}
+#bill_details {
+	background-color: rgba(0,0,0,0.9);
+	width: 1000px;
+	height: 500px;
+	position: relative;
+	top: 100px;
+	margin: 0 auto;
+	border: 10px solid white;
+}
+#prod_options {
+	position: absolute;
+	left: 640px;
+	top: 50px;
+	background-color: #aaaaaa;
+	color: white;
+	font-weight: bold;
+	width: 130px;
+}
+#add {
+	position: absolute;
+	left: 780px;
+	top: 50px;
+}
+#tablescroll {
+	width: 300px;
+	height: 150px;
+	overflow: scroll;
+	position: absolute;
+	top: 120px;
+	left: 580px;
+	border: 2px solid white;
+}
+
+#tableofwarnings{
+	padding: 20px 10px;
+	position: relative;
+	top: 150px;
+	width: 400px;
+	text-align: center;
+	background-color: red;
+	margin: 0 auto;
+	border: 2px solid white;
+}
+#billfinal {
+	width: 320px;
+	height: 50px;
+	margin: 20px auto;
+}
+#oiddiv{
+	
+	font-size:25px;
+	font-weight:bold;	
+	width:370px;
+	height:40px;
+	margin:0 auto;
+	color: #dddddd;
+	font-family: "Trebuchet MS";
+}
+
+#wardiv{
+	font-size:25px;
+	font-weight:bold;	
+	width:250px;
+	position:relative;
+	top:52px;
+	height:40px;
+	margin:0 auto;
+	color: #dddddd;
+	font-family: "Trebuchet MS";
+}
+#empdiv{
+	font-size:25px;
+	font-weight:bold;	
+	width:250px;
+	position:relative;
+	top:52px;
+	height:40px;
+	margin:0 auto;
+	color: #dddddd;
+	font-family: "Trebuchet MS";
+}
+
+#newodiv{
+	font-size:25px;
+	font-weight:bold;	
+	position:relative;
+	top:30px;
+	width:290px;
+	height:40px;
+	margin:0 auto;
+	color: #dddddd;
+	font-family: "Trebuchet MS";
+}
+#totalorder {
+	display: inline-block;
+	padding: 3px;
+	position: relative;
+	top: 3px;
+	border: 2px solid black;
+	font-size: 25px;
+	width: 80px;
+	background-color: pink;
+}
+#billsheet {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: black;
+	background-size: cover;
+	width: 100%;
+	height:80%;
+}
+#billitems {
+	margin: 0 auto;
+	width: 400px;
+	position: relative;
+	top: 100px;
+}
+/*product page*/
+#product_page {
+	width: 100%;
+	height: 800px;
+	background-image: url(otherback.jpg);
+}
+
+#supplier_page {
+	width: 100%;
+	height: 800px;
+	background-image: url(otherback.jpg);
+}
+#addprodform {
+	width: 600px;
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+	top: 150px;
+	color : #dddddd;
+	font-family: "Trebuchet MS"; 
+	background-color: rgba(0,0,0,0.9);
+	border: 10px solid white;
+}
+
+#employeeform{
+	width: 300px;
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+	top: 150px;
+	color : #dddddd;
+	font-family: "Trebuchet MS";
+	background-color: rgba(0,0,0,0.9);
+	border: 10px solid white;
+}
+
+#supplierform{
+	width: 300px;
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+	top: 150px;
+	color : #dddddd;
+	font-family: "Trebuchet MS";
+	background-color: rgba(0,0,0,0.9);
+	border: 10px solid white;
+}
+
+#piddiv{
+	width:370px;
+	height:40px;
+	margin:0 auto;
+	position: relative;
+	top: 52px;
+	font-size:25px;
+	color: #dddddd;
+	font-family: "Trebuchet MS"; 
+	
+	
+}
+#supdiv{
+	width:250px;
+	height:40px;
+	margin:0 auto;
+	position: relative;
+	top: 52px;
+	font-size:25px;
+	color: #dddddd;
+	font-family: "Trebuchet MS"; 
+}
+#warnings_page {
+	width: 100%;
+	height: 800px;
+	background-image: url(otherback.jpg);
+}
+#employee_page {
+	width: 100%;
+	height: 800px;
+	background-image: url(otherback.jpg);
+}
+#homepage {
+	height: 300px;
+	width: 500px;
+	background-image: url(otherback.jpg);
+}				
+#employee {
+	width: 500px;
+	height: 300px;
+	background-color: orange;
+}
+#back {
+	width: 60px;
+	height: 20px;
+	text-align: center;
+	padding: 5px;
+	font-weight: bold;
+	border-radius: 5px;
+	background-color: cyan;
+	position: fixed;
+	bottom: 30px;
+	right: 35px;
+	transition: all 0.2s;
+}
+#back:hover {
+	background-color: lime;
+	cursor: pointer;
+}
+#customername {
+	color: white;
+	float: left;
+	padding: 10px;
+}
+#todaydate {
+	color: white;
+	float: right;
+	padding: 10px;
+}

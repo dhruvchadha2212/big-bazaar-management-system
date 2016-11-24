@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel = "stylesheet" href = "/assets/style.css">
+	</head>
+	<body>
+	
+	
+	
+	
+	
+	
+<div id="id01" class="modal">
+  
+  <form id = "adminform" class="modal-content animate">
+
+    <div class="container">
+
+      <label><b>Password</b></label>
+      <input type="password" name = "pass" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+	
+	<div id = "welcomepage">
+		<div id = "fade"></div>
+		<div id = "status">LOG IN</div>
+		<h1 id = "welcomepagehead">Welcome to Big Bazaar</h1>
+		<div id = "h_links">
+			<div id = "neworder"><p>New Order</p></div>
+			<div id = "h_employee"><p>Employee</p></div>
+			<div id = "h_supplier"><p>Supplier</p></div>
+			<div id = "h_products"><p>Products</p></div>
+			<div id = "getwarnings"><p>Warnings</p></div>
+		</div>
+	</div>
+	
+	<div id ="neworder_page">
+		<div id="newodiv">
+			<h1>New Order</h1>
+		</div>
+		<form id = "bill_details">
+			<div id="oiddiv">
+				<span id="oidhead">Order Number:</span>
+				<span id = "orderId">Order#</span>
+			</div>
+				
+			<input type = "text" name = "emp_id" autocomplete = "off" placeholder = "Employee ID"><br>
+			<input type = "text" name = "cust_id" autocomplete = "off" placeholder = "Customer ID"><button id = "check">Check</button><button id = "generate">Generate</button><br>
+			<input type = "text" name = "cust_firstname" autocomplete = "off" placeholder = "First Name"><br>
+			<input type = "text" name = "cust_lastname" autocomplete = "off" placeholder = "Last Name"><br>
+			<input type = "text" name = "cust_contact" autocomplete = "off" placeholder = "Contact"><br>
+			<input type = "text" name = "cust_wallet" autocomplete = "off" placeholder = "Wallet amount left" readonly>
+			<input type = "text" name = "usefromwallet" autocomplete = "off" placeholder = "Use from wallet"><button type = "button" id = "usewallet">Redeem</button><br>
+			<select name = "prod_name" id = "prod_options">
+				<option value = "" disabled selected>Select product</option>
+			</select>
+			
+			<button type = "button" id = "add">Add</button>
+			<div id = "tablescroll">
+			<table id = "cart">
+				<tr>
+					<th>Product ID</th>
+					<th>Product Name</th>
+					<th>Cost</th>
+				</tr>
+			</table>
+			</div>
+			<div id = "billfinal">
+				<span style = "font-size: 30px; font-weight: bold; position: relative; font-family: Trebuchet MS; color:#dddfff ; top: 5px;">Total:&nbsp</span>
+				<span id = "totalorder">0</span>
+				<input type = "submit" value = "Bill" style = "width: 80px" id = "billsubmit">
+			</div>
+			<div id = "billsheet">
+				<h1 style = "text-align: center; color: white; margin-bottom: 10px;">Bill</h1>
+				<h3 id = "customername"></h3>
+				<h3 id = "todaydate"></h3>
+				<table id = "billitems">
+				<tr>
+					<th>Product ID</th>
+					<th>Product Name</th>
+					<th>Cost</th>
+					<th>Quantity</th>
+				</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+	<div id = "product_page">
+		<div id="piddiv">
+			<h1> Product Details</h1>
+				
+			</div>
+		<form id = "addprodform">
+			&nbsp<b>Product ID:</b>&nbsp <input style = "position: relative; left: 86px;" type = "text" name = "prod_pid" autocomplete = "off" placeholder = "Product ID"><button type = "button" id = "checkProd" style = "position: relative; left: 85px;">Check</button><br>
+			&nbsp<b>Product Name:</b>&nbsp <input style = "position: relative; left: 58px;" type = "text" name = "prod_pname" autocomplete = "off" placeholder = "Product Name"><br>
+			&nbsp<b>Product Cost:</b>&nbsp <input style = "position: relative; left: 69px;" type = "text" name = "prod_cost" autocomplete = "off" placeholder = "Product Cost"><br>
+			&nbsp<b>Product Quantity Left:</b>&nbsp <input style = "position: relative; left: 1px;" type = "text" name = "prod_quantity" autocomplete = "off" placeholder = "Quantity left" readonly><br>
+			&nbsp<b>Product Threshold:</b>&nbsp <input style = "position: relative; left: 27px;" type = "text" name = "prod_threshold" autocomplete = "off" placeholder = "Current Threshold"><br>
+			&nbsp<b>Quantity to add:</b>&nbsp <input style = "position: relative; left: 48px;" type = "text" name = "prod_toadd" autocomplete = "off" placeholder = "Quantity to add"><br>
+			<input type = "submit" value = "Add" id = "prodsubmit" style = "position: relative; left: 270px; top: 30px;">
+		</form>
+	</div>
+	
+	<div id = "employee_page">
+		<div id="empdiv">
+			<h1> Employees</h1>
+		</div>
+		<form id = "employeeform">
+			<input type = "text" name = "emp_empid" autocomplete = "off" placeholder = "Employee ID"><button type = "button" id = "checkEmployee">Check</button><br>
+			<input type = "text" name = "emp_empname" autocomplete = "off" placeholder = "Employee Name"><br>
+			<input type = "text" name = "emp_salary" autocomplete = "off" placeholder = "Employee Salary"><br>
+			<input type = "text" name = "emp_contact" autocomplete = "off" placeholder = "Employee Contact"><br>
+			<input type = "submit" id = "empsubmit" value = "Add">
+		</form>
+	</div>
+	
+	
+	<div id = "supplier_page">
+		<div id="supdiv">
+			<h1>Suppliers</h1>
+				
+			</div>
+		<form id = "supplierform">
+			<input type = "text" name = "sup_id" autocomplete = "off" placeholder = "Supplier ID"><button type = "button" id = "checkSupplier">Check</button><br>
+			<input type = "text" name = "sup_name" autocomplete = "off" placeholder = "Supplier Name"><br>
+			<input type = "text" name = "sup_address" autocomplete = "off" placeholder = "Address"><br>
+			<input type = "text" name = "sup_contact" autocomplete = "off" placeholder = "Contact"><br>
+			<input type = "text" name = "sup_blacklisted" autocomplete = "off" placeholder = "Blacklisted"><br>
+			<input type = "submit" name = "submitsup" value = "Add">
+		</form>
+		<p id = "submitted_sup"></p>
+	</div>
+	
+	<div id = "warnings_page">
+		<div id="wardiv">
+			<h1> Warnings</h1>	
+		</div>
+		<table id = "tableofwarnings">
+			<tr>
+				<th>Product ID</th>
+				<th>Product Name</th>
+				<th>Quantity</th>
+				<th>Threshold</th>
+			</tr>
+		</table>
+	</div>
+	<div id = "back">BACK</div>
+	
+		<script src="/socket.io/socket.io.js"></script>
+		<script src = "/assets/script.js"></script>
+	</body>
+</html>
