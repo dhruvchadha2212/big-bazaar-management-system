@@ -7,6 +7,7 @@ First install appropriate Node.js runtime environment on your OS.
 
 Then, open the command prompt at the location where these files are present, and type in the following commands -
 
->npm install nodemon -g
+  >npm install nodemon -g
 
->nodemon server.js
+   
+   >nodemon server.js
